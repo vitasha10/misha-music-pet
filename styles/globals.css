@@ -5,7 +5,6 @@ body {
   overflow:auto;
 }
 body, #__next {
-  background: #111111;
   display: block;
   height: 100vh;
   width: 100vw;
@@ -17,6 +16,7 @@ body, #__next {
 }
 
 .backVideo{
+  background: #111111;
   position: fixed;
   top: 0;
   left: -500px;
