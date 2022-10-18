@@ -2,6 +2,11 @@ html,
 body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+}
+body, #__next {
+  height: 100vh;
+  width: 100vw;
   overflow: hidden;
 }
 *{
@@ -12,7 +17,7 @@ body {
 .backVideo{
   position: absolute;
   top: 0;
-  left: 0;
+  left: -500px;
   min-height: 100vh;
   min-width: 100vw;
   height: auto;
@@ -24,7 +29,7 @@ body {
   height: 550px;
   margin: 200px auto;
   display: block;
-  width: 500px;
+  width: 300px;
   background: rgba(0,0,0, 0.5);
   border-radius: 10px;
   /*box-shadow: 0 0 20px 10px rgba(0, 0, 0, 1);*/
@@ -34,7 +39,7 @@ body {
   animation-iteration-count: infinite;
 }
 .info h1{
-  font-size: 32px;
+  font-size: 24px;
   text-align: center;
   padding: 50px 0 50px 0;
   color: crimson;
@@ -59,7 +64,7 @@ body {
   display: block;
   margin: 64px auto;
   height: 64px;
-  padding: 10px 40px 10px 40px;
+  padding: 10px 20px 10px 20px;
   background: rgba(220, 20, 60, 0.2);
   border-radius: 10px;
   box-shadow: 0 0 14px 5px rgba(220, 20, 60, 1);
