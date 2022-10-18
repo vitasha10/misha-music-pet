@@ -19,3 +19,104 @@ body {
   width: auto;
   z-index: -1;
 }
+
+.info{
+  height: 550px;
+  margin: 200px auto;
+  display: block;
+  width: 500px;
+  background: rgba(0,0,0, 0.5);
+  border-radius: 10px;
+  /*box-shadow: 0 0 20px 10px rgba(0, 0, 0, 1);*/
+  box-shadow: 0 0 14px 5px rgba(220, 20, 60, 1);
+  animation-duration: 5s;
+  animation-name: anime2;
+  animation-iteration-count: infinite;
+}
+.info h1{
+  font-size: 32px;
+  text-align: center;
+  padding: 50px 0 50px 0;
+  color: crimson;
+  opacity: 0.8;
+  display: block;
+  animation-duration: 1s;
+  animation-name: anime3;
+  animation-iteration-count: infinite;
+}
+.info img{
+  height: 200px;
+  width: 200px;
+  margin: 0 auto;
+  display: block;
+  opacity: 0.6;
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  box-shadow: 0 0 14px 5px rgba(220, 20, 60, 1);
+}
+.btnDiv button{
+  display: block;
+  margin: 64px auto;
+  height: 64px;
+  padding: 10px 40px 10px 40px;
+  background: rgba(220, 20, 60, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 0 14px 5px rgba(220, 20, 60, 1);
+  color: crimson;
+  font-size: 24px;
+
+}
+
+@keyframes slidein {
+  from {
+    height: 150px;
+    width: 50px;
+    opacity: 0.3;
+  }
+
+  50% {
+    height: 50px;
+    width: 200px;
+    opacity: 0.7;
+  }
+  to {
+    height: 150px;
+    width: 50px;
+    opacity: 0.3;
+  }
+}
+
+
+@keyframes anime2 {
+  from {
+    box-shadow: 0 0 14px 5px rgba(220, 20, 60, 1);
+  }
+  30% {
+
+    box-shadow: 0 0 14px 5px rgba(220, 20, 60, 1);
+  }
+  50% {
+    box-shadow: 0 0 14px 5px rgba(0, 0, 0, 1);
+  }
+  60% {
+    box-shadow: 0 0 14px 5px rgba(220, 20, 60, 1);
+  }
+  to {
+    box-shadow: 0 0 14px 5px rgba(220, 20, 60, 1);
+  }
+}
+
+
+@keyframes anime3 {
+  from {
+    transform: scaleX(0.5);
+  }
+
+  50% {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(0.5);
+  }
+}

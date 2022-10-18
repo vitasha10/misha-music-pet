@@ -1,30 +1,8 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import {useState,useEffect} from "react";
-
-const useAudio = url => {
-    const [audio, setAudio] = useState(null);
-    const [playing, setPlaying] = useState(false);
-    useEffect(() => {
-        setAudio(new Audio(url))
-        playing ? audio?.play() : audio?.pause();
-        // only run once on the first render on the client
-    }, [playing])
-
-    const toggle = () => setPlaying(!playing);
-
-    useEffect(() => {
-        audio?.addEventListener('ended', () => setPlaying(false));
-        return () => {
-            audio?.removeEventListener('ended', () => setPlaying(false));
-        };
-    }, []);
-
-    return [playing, toggle];
-};
+import Player from "../components/Player";
 
 export default function Home() {
-    const [playing, toggle] = useAudio("/audio.mp3");
     return (
         <div className={styles.container}>
             <Head>
@@ -35,9 +13,10 @@ export default function Home() {
             </Head>
             <div>
                 <video src="/video.mp4" className='backVideo' autoPlay muted/>
-                <div>
+                <div className='info'>
                     <h1>😎Misha And Nikita Mood😎</h1>
-                    <button onClick={toggle}>Music</button>
+                    <img src='/photo.jpg'/>
+                    <Player url={'/audio.mp3'} />
                 </div>
             </div>
         </div>
