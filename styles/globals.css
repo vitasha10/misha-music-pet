@@ -5,6 +5,7 @@ body {
   overflow:auto;
 }
 body, #__next {
+  background: #111111;
   display: block;
   height: 100vh;
   width: 100vw;
