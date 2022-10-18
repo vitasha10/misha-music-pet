@@ -26,7 +26,11 @@ body, #__next {
   width: auto;
   z-index: -1;
 }
-
+@media (min-width: 800px) {
+  .backVideo{
+    left: 0;
+  }
+}
 .info{
   height: 550px;
   margin: 200px auto;
