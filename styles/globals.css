@@ -2,9 +2,10 @@ html,
 body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-
+  overflow:auto;
 }
 body, #__next {
+  display: block;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
@@ -15,7 +16,7 @@ body, #__next {
 }
 
 .backVideo{
-  position: absolute;
+  position: fixed;
   top: 0;
   left: -500px;
   min-height: 100vh;
